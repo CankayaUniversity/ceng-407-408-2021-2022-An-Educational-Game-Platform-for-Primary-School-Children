@@ -456,6 +456,7 @@ RectTransform:
   - {fileID: 714348973}
   - {fileID: 2100488686}
   - {fileID: 581991780}
+  - {fileID: 948243711}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -936,12 +937,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 948243708}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3411.0002}
+  m_LocalScale: {x: 37.9, y: 37.9, z: 37.9}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 524570669}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194676018
 GameObject:
@@ -1376,7 +1377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1581760964
 MonoBehaviour:
@@ -1390,8 +1391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 025e5fd956b02d4438ff95d6f993e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 1718559585}
-  CountTime: 120
 --- !u!1 &1608655195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718559584}
   - component: {fileID: 1718559586}
+  - component: {fileID: 1718559587}
   - component: {fileID: 1718559585}
   m_Layer: 5
   m_Name: Timer
@@ -1600,6 +1600,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718559583}
   m_CullTransparentMesh: 0
+--- !u!114 &1718559587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718559583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fd1a3ed392f1e4fa7494dda81232b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerText: {fileID: 1718559585}
+  CountTime: 120
 --- !u!1 &2100488685
 GameObject:
   m_ObjectHideFlags: 0
