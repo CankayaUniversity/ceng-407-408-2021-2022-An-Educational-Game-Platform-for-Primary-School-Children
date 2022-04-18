@@ -1,39 +1,35 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float time;
-    private int coinCount;
-
-    public TMP_Text text;
+    public Text timerText;
+    public int CountTime;
+    string minutes, seconds;
 
     void Start()
     {
-        coinCount = 0;
-        text.text = "" + (int)time;
+        StartCoroutine(CountDown());
     }
 
-    
-    void Update()
+    IEnumerator CountDown()
     {
-        if (time >= 0)
+        while (CountTime > 0)
         {
-            time -= Time.deltaTime;
-            text.text = "" + (int)time;
-        }
+            UpdateTime();
 
-        coinCount = PlayerPrefs.GetInt("1tl")+ PlayerPrefs.GetInt("50krs")+ PlayerPrefs.GetInt("25krs") + PlayerPrefs.GetInt("10krs") + PlayerPrefs.GetInt("5krs") + PlayerPrefs.GetInt("1krs");
-        if (time >= 0 && coinCount == 6)
-        {
-            text.text = "Kazandın!!!";
+            yield return new WaitForSeconds(1);
+
+            CountTime--;
         }
-        else if(time <= 0 && coinCount != 6)
-        {
-            text.text = "Kaybettin!!!";
-        }
+    }
+
+    private void UpdateTime()
+    {
+        minutes = (CountTime / 60).ToString("00");
+        seconds = (CountTime % 60).ToString("00");
+        timerText.text = minutes + ":" + seconds;
     }
 }
