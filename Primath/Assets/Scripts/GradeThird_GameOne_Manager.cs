@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
+using System.Collections;
 
 public class GradeThird_GameOne_Manager : MonoBehaviour
 {
@@ -15,8 +17,10 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
     string txt;
 
     GameObject question;
+    GameObject ansPanel;
     GameObject mainCanvas;
     GameObject qNum, ansNum;
+    GameObject redGirl, wolf;
     List<GameObject> buttons = new List<GameObject>();
 
     void Start()
@@ -28,14 +32,18 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         sign = numbers.sign;
 
         mainCanvas = GameObject.Find("MainCanvas");
+        ansPanel = mainCanvas.transform.Find("AnswerPanel").gameObject;
         question = mainCanvas.transform.Find("GameQuestion").transform.Find("Question").gameObject;
-
+        redGirl = mainCanvas.transform.Find("RedGirl").gameObject;
+        wolf = mainCanvas.transform.Find("Wolf").gameObject;
         qNum = mainCanvas.transform.Find("QuNum").gameObject;
         ansNum = mainCanvas.transform.Find("Ans").gameObject;
 
-        buttons.Add(mainCanvas.transform.Find("Answer_1").gameObject);
-        buttons.Add(mainCanvas.transform.Find("Answer_2").gameObject);
-        buttons.Add(mainCanvas.transform.Find("Answer_3").gameObject);
+        buttons.Add(ansPanel.transform.Find("Answer_1").gameObject);
+        buttons.Add(ansPanel.transform.Find("Answer_2").gameObject);
+        buttons.Add(ansPanel.transform.Find("Answer_3").gameObject);
+
+
 
         ansNum.GetComponent<Text>().text = score.ToString();
 
@@ -89,7 +97,7 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         answers[index] -= answers[temp];
     }
 
-    public void PrintQuestion()
+    private void PrintQuestion()
     {
         GanerateQuestion(question.GetComponent<Text>());
     }
@@ -100,7 +108,25 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         {
             score++;
             ansNum.GetComponent<Text>().text = score.ToString();
+            text.GetComponentInParent<Animator>().Play("Correct");
+            redGirl.GetComponent<MoveImage>().Move();
         }
+        else
+        {
+            text.GetComponentInParent<Animator>().Play("False");
+            wolf.GetComponent<MoveImage>().Move();
+        }
+
+        StartCoroutine(WaitForAnim(text.GetComponentInParent<Button>()));
+
         PrintQuestion();
+    }
+
+    IEnumerator WaitForAnim(Button button)
+    {
+        yield return new WaitForSeconds(1);
+
+        button.interactable = false;
+        button.interactable = true;
     }
 }

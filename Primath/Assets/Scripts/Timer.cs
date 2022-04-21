@@ -32,4 +32,19 @@ public class Timer : MonoBehaviour
         seconds = (CountTime % 60).ToString("00");
         timerText.text = minutes + ":" + seconds;
     }
+
+    public int getTimeAsSec()
+    {
+        return CountTime;
+    }
+
+    public void setTimeAsSec(int time)
+    {
+        CountTime = time;
+    }
+
+    public bool isTimeExposed()
+    {
+        return CountTime > 0;
+    }
 }
