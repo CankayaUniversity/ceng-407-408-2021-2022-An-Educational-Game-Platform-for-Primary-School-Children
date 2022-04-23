@@ -453,13 +453,10 @@ RectTransform:
   - {fileID: 575330889}
   - {fileID: 2100488686}
   - {fileID: 581991780}
-<<<<<<< Updated upstream
   - {fileID: 948243711}
-=======
   - {fileID: 1307595947}
   - {fileID: 971015418}
   - {fileID: 1690046613}
->>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -985,7 +982,7 @@ Transform:
   m_LocalScale: {x: 37.9, y: 37.9, z: 37.9}
   m_Children: []
   m_Father: {fileID: 524570669}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971015417
 GameObject:
@@ -1018,7 +1015,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 524570669}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1342,7 +1339,7 @@ RectTransform:
   - {fileID: 613558728}
   - {fileID: 714348973}
   m_Father: {fileID: 524570669}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1552,7 +1549,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1581760963}
   - component: {fileID: 1581760962}
-  - component: {fileID: 1581760964}
   m_Layer: 0
   m_Name: GT_GO_Manager
   m_TagString: Untagged
@@ -1587,18 +1583,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581760964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581760961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 025e5fd956b02d4438ff95d6f993e252, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1608655195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,7 +1764,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 524570669}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
