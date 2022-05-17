@@ -7,7 +7,8 @@ public class Timer : MonoBehaviour
 {
     public Text timerText;
     public int CountTime;
-    string minutes, seconds;
+    private string minutes, seconds;
+    public bool isStop = false;
 
     void Start()
     {
@@ -18,11 +19,15 @@ public class Timer : MonoBehaviour
     {
         while (CountTime > 0)
         {
-            UpdateTime();
+            if (!isStop)
+            {
+                UpdateTime();
 
-            yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(1);
 
-            CountTime--;
+                CountTime--;
+            }
+            yield return null;
         }
     }
 
