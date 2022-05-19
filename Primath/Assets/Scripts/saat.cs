@@ -14,6 +14,7 @@ public class saat : MonoBehaviour
     private Dictionary<string[], float> ANGLE;
     private Dictionary<string, float> MANGLE;
 
+    public bool isStop = false;
     private float kalan = 120;
     private bool devam = true;
 
@@ -105,17 +106,20 @@ public class saat : MonoBehaviour
             giveMessage("TEBRIKLER DIGER BOLUME GECTIN");
         }
         else TXT[0].color = Color.red;
-
-        kalan -= Time.deltaTime;
-        if (kalan <= 0)
+        if (isStop == false)
         {
-            devam = false;
-            giveMessage("OYUNU BITIREMEDIN");
-            TXT[2].text = "K: 0";
-            TXT[2].color = Color.red;
-            return;
+            kalan -= Time.deltaTime;
+            if (kalan <= 0)
+            {
+                devam = false;
+                giveMessage("OYUNU BITIREMEDIN");
+                TXT[2].text = "K: 0";
+                TXT[2].color = Color.red;
+                return;
+            }
+            TXT[2].text = "K: " + Mathf.RoundToInt(kalan);
         }
-        TXT[2].text = "K: " + Mathf.RoundToInt(kalan);
+        
     }
 
     private string[] findNearPoint(float rot)

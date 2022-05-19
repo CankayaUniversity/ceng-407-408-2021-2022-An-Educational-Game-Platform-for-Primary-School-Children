@@ -16,6 +16,7 @@ public class saat2 : MonoBehaviour
     public GameObject kazanmaPanel;
     public GameObject kaybetmepanali;
     private bool flag = true;
+    public bool isStop = false;
 
     void Start()
     {
@@ -24,8 +25,12 @@ public class saat2 : MonoBehaviour
 
     void Update()
     {
-        if(kalan !=0 && flag == true)
-        kalan -= Time.deltaTime;
+        if (isStop == false)
+        {
+            if (kalan != 0 && flag == true)
+                kalan -= Time.deltaTime;
+        }
+       
 
         TXT.text = "KALAN SANİYE: " + Mathf.RoundToInt(kalan);
         if (kalan == 0 || kalan < 0)
