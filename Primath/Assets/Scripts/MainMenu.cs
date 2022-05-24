@@ -105,10 +105,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadThirdGradeFirstGame() => SceneManager.LoadScene(7); //Üçüncü Sýnýf Birinci Oyun
     public void LoadThirdGradeSecondGame() => SceneManager.LoadScene(8); //Üçüncü Sýnýf Ýkinci Oyun
-    public void LoadThirdGradeThirdGame() => SceneManager.LoadScene(0); //Üçüncü Sýnýf Üçüncü Oyun
+    public void LoadThirdGradeThirdGame() => SceneManager.LoadScene(9); //Üçüncü Sýnýf Üçüncü Oyun
 
-    public void LoadForuthGradeFirstGame() => SceneManager.LoadScene(9); //Dördüncü Sýnýf Birinci Oyun
-    public void LoadForuthGradeSecondGame() => SceneManager.LoadScene(10); //Dördüncü Sýnýf Ýkinci Oyun
+    public void LoadForuthGradeFirstGame() => SceneManager.LoadScene(10); //Dördüncü Sýnýf Birinci Oyun
+    public void LoadForuthGradeSecondGame() => SceneManager.LoadScene(11); //Dördüncü Sýnýf Ýkinci Oyun
     public void LoadForuthGradeThirdGame() => SceneManager.LoadScene(0); //Dördüncü Sýnýf Üçüncü Oyun
 
 }

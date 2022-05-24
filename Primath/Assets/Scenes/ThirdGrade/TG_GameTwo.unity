@@ -593,6 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 986178031}
+  time: 0
   CountTime: 120
   isStop: 0
 --- !u!1 &1011347682
@@ -1863,6 +1864,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 734479837, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
       propertyPath: timer
       value: 

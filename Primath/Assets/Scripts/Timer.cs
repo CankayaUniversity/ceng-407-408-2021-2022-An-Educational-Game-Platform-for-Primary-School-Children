@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timerText;
+    public int time;
     public int CountTime;
     private string minutes, seconds;
     public bool isStop = false;
 
     void Start()
     {
+        time = CountTime;
         StartCoroutine(CountDown());
     }
 
@@ -33,7 +35,7 @@ public class Timer : MonoBehaviour
 
     private void UpdateTime()
     {
-        minutes = (CountTime / 60).ToString("00");
+        minutes = (CountTime / 60).ToString("0");
         seconds = (CountTime % 60).ToString("00");
         timerText.text = minutes + ":" + seconds;
     }

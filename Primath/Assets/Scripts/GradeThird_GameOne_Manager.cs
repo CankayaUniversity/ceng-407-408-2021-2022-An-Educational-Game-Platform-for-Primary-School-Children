@@ -11,10 +11,13 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
     private int min ,max, answer, left, right;
     private int[] answers = new int[3];
     private int score, qNumber;
+    public int maxQuestionNum = 30;
 
     private char sign;
 
     string txt;
+
+    Timer timer;
 
     GameObject question;
     GameObject ansPanel;
@@ -22,6 +25,8 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
     GameObject qNum, ansNum;
     GameObject redGirl, wolf;
     List<GameObject> buttons = new List<GameObject>();
+
+    public TGFinish tgFinish;
 
     void Start()
     {
@@ -38,6 +43,7 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         wolf = mainCanvas.transform.Find("Wolf").gameObject;
         qNum = mainCanvas.transform.Find("QuNum").gameObject;
         ansNum = mainCanvas.transform.Find("Ans").gameObject;
+        timer = mainCanvas.transform.Find("Timer").gameObject.GetComponent<Timer>();
 
         buttons.Add(ansPanel.transform.Find("Answer_1").gameObject);
         buttons.Add(ansPanel.transform.Find("Answer_2").gameObject);
@@ -45,11 +51,18 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
 
 
 
-        ansNum.GetComponent<Text>().text = score.ToString();
+        ansNum.GetComponent<Text>().text = "<color=green>" + score.ToString() + "</color>";
 
         PrintQuestion();
     }
 
+    private void Update()
+    {
+        if(!timer.isTimeExposed() || qNumber >= maxQuestionNum)
+        {
+            Finish();
+        }
+    }
     private void GanerateQuestion(Text text)
     {
         left = Random.Range(min, max);
@@ -58,7 +71,7 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         text.text = txt;
 
         qNumber++;
-        qNum.GetComponent<Text>().text = qNumber.ToString();
+        qNum.GetComponent<Text>().text = qNumber.ToString() + "/" + maxQuestionNum.ToString();
 
         switch (sign)
         {
@@ -107,7 +120,7 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         if (text.text == answer.ToString())
         {
             score++;
-            ansNum.GetComponent<Text>().text = score.ToString();
+            ansNum.GetComponent<Text>().text = "<color=green>" + score.ToString() + "</color>";
             text.GetComponentInParent<Animator>().Play("Correct");
             redGirl.GetComponent<MoveImage>().Move();
         }
@@ -128,5 +141,23 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
 
         button.interactable = false;
         button.interactable = true;
+    }
+
+    public void Finish()
+    {
+        timer.isStop = true;
+        int pastTime = timer.time - timer.CountTime;
+        int wrongs = qNumber - score - 1;
+
+        tgFinish.TimeSpent = pastTime;
+        tgFinish.Wrongs = wrongs;
+
+        if (pastTime < 40)
+            pastTime = 0;
+        else
+            pastTime -= 40;
+
+        tgFinish.Score = (score * 6) - (pastTime / 2) - (wrongs * 2) + 10;
+        tgFinish.Finished();
     }
 }
