@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Timer2 : MonoBehaviour
 {
+    public GameObject bitisPanel, kazanmaPanel;
     public float time;
     private int coinCount;
     public bool isStop = false;
@@ -33,11 +35,15 @@ public class Timer2 : MonoBehaviour
         coinCount = PlayerPrefs.GetInt("1tl")+ PlayerPrefs.GetInt("50krs")+ PlayerPrefs.GetInt("25krs") + PlayerPrefs.GetInt("10krs") + PlayerPrefs.GetInt("5krs") + PlayerPrefs.GetInt("1krs");
         if (time >= 0 && coinCount == 6)
         {
+            kazanmaPanel.SetActive(true);
             text.text = "Kazandın!!!";
         }
         else if(time <= 0 && coinCount != 6)
         {
+            bitisPanel.SetActive(true);
             text.text = "Kaybettin!!!";
+
         }
     }
+   
 }

@@ -10,12 +10,12 @@ public class saat : MonoBehaviour
     private float aciAra;
     public Text[] TXT;
     public GameObject mesaj;
-
+    public GameObject bitisPanel, kazanmaPanel;
     private Dictionary<string[], float> ANGLE;
     private Dictionary<string, float> MANGLE;
 
     public bool isStop = false;
-    private float kalan = 120;
+    private float kalan = 10;
     private bool devam = true;
 
     // Start is called before the first frame update
@@ -104,6 +104,7 @@ public class saat : MonoBehaviour
             TXT[0].color = Color.green;
             devam = false;
             giveMessage("TEBRIKLER DIGER BOLUME GECTIN");
+            kazanmaPanel.SetActive(true);
         }
         else TXT[0].color = Color.red;
         if (isStop == false)
@@ -115,6 +116,7 @@ public class saat : MonoBehaviour
                 giveMessage("OYUNU BITIREMEDIN");
                 TXT[2].text = "K: 0";
                 TXT[2].color = Color.red;
+                bitisPanel.SetActive(true);
                 return;
             }
             TXT[2].text = "K: " + Mathf.RoundToInt(kalan);
@@ -177,7 +179,7 @@ public class saat : MonoBehaviour
 
     private void giveMessage(string msg)
     {
-        mesaj.SetActive(true);
-        TXT[3].text = msg;
+       // mesaj.SetActive(true);
+        // TXT[3].text = msg;
     }
 }
