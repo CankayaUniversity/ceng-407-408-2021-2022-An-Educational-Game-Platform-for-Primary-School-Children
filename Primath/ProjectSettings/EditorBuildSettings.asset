@@ -24,8 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SecondGrade/agac.unity
     guid: 70259c4f0ac0248459512fd086f950d0
   - enabled: 1
-    path: Assets/Scenes/SecondGrade/saat2.unity
-    guid: a0ea0dbad15ad7b419bf05b8ca86303b
+    path: Assets/Scenes/SecondGrade/saat.unity
+    guid: 6c79b29bf2e37b940a706f21aad447f8
   - enabled: 1
     path: Assets/Scenes/ThirdGrade/TG_GameOne.unity
     guid: 2cda990e2423bbf4892e6590ba056729
