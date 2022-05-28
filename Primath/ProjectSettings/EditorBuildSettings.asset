@@ -65,4 +65,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SecondGrade/saat2part3.unity
     guid: bd06b6a1e6c2f5c478ff60fa95fc57c9
+  - enabled: 1
+    path: Assets/Scenes/SecondGrade/saat2.unity
+    guid: a0ea0dbad15ad7b419bf05b8ca86303b
   m_configObjects: {}

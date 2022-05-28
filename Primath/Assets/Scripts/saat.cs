@@ -49,7 +49,7 @@ public class saat : MonoBehaviour
         }
 
         TXT[2].text = "K: " + kalan;
-        string[] rastgeleKonumlar = new string[10] { "11:00","10:45", "09:30", "10:45", "12:45", "23:30", "10:00", "09:30", "10:00", "07:30" };
+        string[] rastgeleKonumlar = new string[10] {"11:00","10:45", "09:30", "10:45", "12:45", "23:30", "10:00", "09:30", "10:00", "07:30" };
 
         TXT[0].text = rastgeleKonumlar[Random.Range(0, rastgeleKonumlar.Length - 1)];
     }

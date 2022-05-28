@@ -45,14 +45,20 @@ public class Scenemangers : MonoBehaviour
         var currentIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentIndex + 1);
     }
+    public void LoadNextScenesaat2part3()
+    {
+       
+        SceneManager.LoadScene(19);
+    }
     public void LoadNextScenesaat2part2()
     {
         var currentIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentIndex + 12);
+        SceneManager.LoadScene(18);
     }
-    public void LoadNextScenesaat2part3()
+    
+    public void LoadNextScenesaatpart3tosaat2()
     {
-        var currentIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentIndex + 1);
+   
+        SceneManager.LoadScene(20);
     }
 }

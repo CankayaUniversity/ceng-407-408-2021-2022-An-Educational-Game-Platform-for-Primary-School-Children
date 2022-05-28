@@ -1942,13 +1942,9 @@ PrefabInstance:
     - target: {fileID: 423769703048958831, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Text
-      value: "Verilen sorulara do\u011Fru cevap vererek <color=red>K\u0131rm\u0131z\u0131
-        Ba\u015Fl\u0131kl\u0131 K\u0131z</color>'\u0131n babannesinin evine ula\u015Fmas\u0131na
-        yard\u0131m edin. Verilen 3 \u015F\u0131ktan do\u011Fru olana t\u0131klayarak
-        k\u0131rm\u0131z\u0131 ba\u015Fl\u0131kl\u0131 k\u0131za yard\u0131m edebilirsin,
-        e\u011Fer yanl\u0131\u015F \u015F\u0131kka t\u0131klarsan <color=grey><b>Kurt</b></color>,
-        <color=red>K\u0131rm\u0131z\u0131 Ba\u015Fl\u0131kl\u0131 K\u0131z</color>'a
-        yakla\u015F\u0131r."
+      value: "sol \xFCst k\xF6\u015Fede dijital olarak verilen saati, belirlenen
+        s\xFCre i\xE7erisinde <color=red>akrep ve yelkovan\u0131</color> <color=green><b>mouse</b></color> 
+        ile hareket ettirerek \r\nortada bulunan analog saatin \xFCzerinde g\xF6stermelisin\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 423769703048958831, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
