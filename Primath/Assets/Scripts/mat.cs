@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +12,18 @@ public class mat : MonoBehaviour
 
     public Text[] TXT;
     public GameObject bitisPanel, kazanmaPanel;
+    public bool yanlýsgecmex =false;
+    [SerializeField] Canvas infoCanvas;
+    [SerializeField] Transform infoPanel;
+    [SerializeField] private float delay = 2f;
 
     private int life;
 
     void Start()
     {
+        infoCanvas.enabled = true;
+        infoPanel.gameObject.SetActive(false);
+
         Application.targetFrameRate = 30;
 
         life = 3;
@@ -31,6 +39,7 @@ public class mat : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow)) transform.position = transform.position + new Vector3(-hareketArtisi, 0, 0);
         if (Input.GetKey(KeyCode.DownArrow)) transform.position = transform.position + new Vector3(0, -hareketArtisi, 0);
         if (Input.GetKey(KeyCode.RightArrow)) transform.position = transform.position + new Vector3(hareketArtisi, 0, 0);
+       
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -46,15 +55,32 @@ public class mat : MonoBehaviour
         {
             if (collision.name.Equals(yanlis))
             {
+                yanlýsgecmex = true;
                 life -= 1;
                 if (life == 0) bitisPanel.SetActive(true);
 
                 TXT[0].text = "CAN: " + life;
                 break;
             }
+            else
+                yanlýsgecmex = false;
+        }
+        if (yanlýsgecmex == true && life != 0)
+        {
+            infoCanvas.gameObject.SetActive(true);
+            infoPanel.gameObject.SetActive(true);
+
+            StartCoroutine(Delay());
         }
 
         Destroy(sorular.transform.GetChild(0).gameObject);
         Destroy(sorular.transform.GetChild(1).gameObject);
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(delay);
+        infoPanel.gameObject.SetActive(false);
+
     }
 }

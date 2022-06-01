@@ -17,7 +17,7 @@ public class saat : MonoBehaviour
     public bool isStop = false;
     private float kalan = 10;
     private bool devam = true;
-
+    public int counter = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +48,9 @@ public class saat : MonoBehaviour
             if (kct == 0) kct = 60;
         }
 
-        TXT[2].text = "K: " + kalan;
-        string[] rastgeleKonumlar = new string[10] {"11:00","10:45", "09:30", "10:45", "12:45", "23:30", "10:00", "09:30", "10:00", "07:30" };
-
+        TXT[2].text = "Kalan saniye:" + kalan;
+        string[] rastgeleKonumlar = new string[13] {"01:30","04:45","03:00","11:00","10:45", "09:30", "06:30", "12:45", "11:30", "10:00", "05:30", "10:15", "07:30" };
+     
         TXT[0].text = rastgeleKonumlar[Random.Range(0, rastgeleKonumlar.Length - 1)];
     }
 
@@ -114,12 +114,12 @@ public class saat : MonoBehaviour
             {
                 devam = false;
                 giveMessage("OYUNU BITIREMEDIN");
-                TXT[2].text = "K: 0";
+                TXT[2].text = "Kalan saniye: 0";
                 TXT[2].color = Color.red;
                 bitisPanel.SetActive(true);
                 return;
             }
-            TXT[2].text = "K: " + Mathf.RoundToInt(kalan);
+            TXT[2].text = "Kalan saniye:" + Mathf.RoundToInt(kalan);
         }
         
     }
