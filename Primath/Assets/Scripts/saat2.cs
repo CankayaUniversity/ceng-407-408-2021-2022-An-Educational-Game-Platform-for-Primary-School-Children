@@ -17,9 +17,14 @@ public class saat2 : MonoBehaviour
     public GameObject kaybetmepanali;
     private bool flag = true;
     public bool isStop = false;
+    [SerializeField] Canvas infoCanvas;
+    [SerializeField] Transform infoPanel;
+    [SerializeField] private float delay = 2f;
 
     void Start()
     {
+        infoCanvas.enabled = true;
+        infoPanel.gameObject.SetActive(false);
         TXT.text = "KALAN SANİYE: " + kalan;
     }
 
@@ -64,7 +69,20 @@ public class saat2 : MonoBehaviour
         }
        
         else
-            Debug.Log("Tekrar Dene");
+        {
+            infoCanvas.gameObject.SetActive(true);
+            infoPanel.gameObject.SetActive(true);
+
+            StartCoroutine(Delay());
+             Debug.Log("Tekrar Dene");
+        }
+           
+    }
+     IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(delay);
+        infoPanel.gameObject.SetActive(false);
+
     }
     // Start is called before the first frame update
    
