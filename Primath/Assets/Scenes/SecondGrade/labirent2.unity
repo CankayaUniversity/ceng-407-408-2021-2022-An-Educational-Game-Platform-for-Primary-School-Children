@@ -1581,22 +1581,6 @@ MonoBehaviour:
   infoCanvas: {fileID: 496634165}
   infoPanel: {fileID: 496634164}
   delay: 2
---- !u!114 &496634167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496634163}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db10ab0192efe834fa18a21b48a0a2fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoCanvas: {fileID: 496634165}
-  infoPanel: {fileID: 496634164}
-  delay: 2
-  x: {fileID: 0}
 --- !u!1 &563474185
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,7 +3559,7 @@ MonoBehaviour:
   - {fileID: 2113940055}
   bitisPanel: {fileID: 369831728}
   kazanmaPanel: {fileID: 276703181}
-  "yanl\u0131sgecmex": 0
+  "yanl\xFDsgecmex": 0
   infoCanvas: {fileID: 496634165}
   infoPanel: {fileID: 496634164}
   delay: 2
