@@ -446,8 +446,8 @@ Canvas:
   m_GameObject: {fileID: 615492807}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 787532603}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -690,7 +690,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.40784314, g: 0.6039216, b: 0.5320697, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -831,6 +831,159 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855341804}
   m_CullTransparentMesh: 1
+--- !u!1001 &1059465345
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
+      propertyPath: tren
+      value: 
+      objectReference: {fileID: 1108299245}
+    - target: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
+      propertyPath: delay
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
+      propertyPath: infoPanel
+      value: 
+      objectReference: {fileID: 1679680433}
+    - target: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
+      propertyPath: infoPanelSec
+      value: 
+      objectReference: {fileID: 1763723444}
+    - target: {fileID: 423769702898430373, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703048958831, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Text
+      value: "Tren vagonlar\u0131n\u0131n \xFCzerinde bulunan rastgele say\u0131lar\u0131,<color=green>
+        1'den 20'ye</color> kadar a\u015Fa\u011F\u0131da bulunan <b>uygun</b> tren
+        vagonlar\u0131na yerle\u015Ftiriniz. <color=yellow><b><i>S\xFCreniz bitmeden
+        oyunu tamamlay\u0131n\u0131z.</i></b></color>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364899, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Name
+      value: InfoCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364900, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 787532603}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 279ec210176caa24388c48662ab4fb81, type: 3}
 --- !u!1 &1108299243
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +1031,8 @@ MonoBehaviour:
   eslesenler: {fileID: 750573123}
   kalan: {fileID: 714976436}
   kapanis: {fileID: 1410658096}
+  fkalan: 90
+  timeFlag: 0
 --- !u!1 &1131962266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1185,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410658096}
   m_CullTransparentMesh: 1
+--- !u!224 &1679680433 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 423769702898430372, guid: 279ec210176caa24388c48662ab4fb81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1059465345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1763723444 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 734479838, guid: 279ec210176caa24388c48662ab4fb81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1059465345}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1766928308
 GameObject:
   m_ObjectHideFlags: 0

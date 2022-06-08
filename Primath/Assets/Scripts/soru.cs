@@ -15,9 +15,10 @@ public class soru : MonoBehaviour
     private float time;
     private bool inquest;
 
-    // Start is called before the first frame update
+    public bool timeFlag;
     void Start()
     {
+
         inquest = false;
         order = -1;
         dogru = 0;
@@ -25,8 +26,8 @@ public class soru : MonoBehaviour
 
         questions = new List<question>();
         questions.Add(new question { qst = "4+2", correct = 0, options = new string[2] { "6", "2" } });
-        questions.Add(new question { qst = "2-2", correct = 1, options = new string[2] { "4", "0" } });
-        questions.Add(new question { qst = "0+5", correct = 0, options = new string[2] { "5", "3" } });
+        questions.Add(new question { qst = "2-1", correct = 1, options = new string[2] { "3", "1" } });
+        questions.Add(new question { qst = "1+5", correct = 0, options = new string[2] { "6", "4" } });
         questions.Add(new question { qst = "3-2", correct = 1, options = new string[2] { "2", "1" } });
         questions.Add(new question { qst = "6+2", correct = 1, options = new string[2] { "4", "8" } });
         questions.Add(new question { qst = "8-4", correct = 0, options = new string[2] { "4", "3" } });
@@ -53,8 +54,11 @@ public class soru : MonoBehaviour
             StartCoroutine(animBIT());
             return;
         }
-        time -= Time.deltaTime;
-        TXT[1].text = Mathf.RoundToInt(time).ToString();
+        if(!timeFlag)
+        {
+            time -= Time.deltaTime;
+            TXT[1].text = Mathf.RoundToInt(time).ToString();
+        }
     }
 
     private void askQuestion()

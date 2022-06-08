@@ -16,13 +16,14 @@ public class dondurma : MonoBehaviour
 
     private bool endRun;
     private int dogru;
-    private float time;
+    [SerializeField] private float time = 90f;
+    public bool timeFlag;
 
     void Start()
     {
         endRun = false;
         dogru = 0;
-        time = 120;
+        timeFlag = false;
 
         math = new Dictionary<int, string[]>();
         math.Add(0, new string[4] { "3-3", "4-4", "0+0", "0+0" });
@@ -78,8 +79,16 @@ public class dondurma : MonoBehaviour
             StartCoroutine(otodiz());
             return;
         }
+        if(!timeFlag)
+            ProcessTime();
+    }
+
+    private void ProcessTime()
+    {
         time -= Time.deltaTime;
-        sure.text = Mathf.RoundToInt(time).ToString();
+        string minutes = (time / 60).ToString("0");
+        string seconds = (time % 60).ToString("00");
+        sure.text = minutes + ":" + seconds;
     }
 
     private IEnumerator otodiz()
@@ -111,7 +120,7 @@ public class dondurma : MonoBehaviour
         if (dogru >= topListesi.childCount)
         {
             endRun = true;
-            sure.color = Color.green;
+            sure.color = Color.yellow;
             bitis.SetActive(true);
         }
     }
@@ -123,8 +132,8 @@ public class dondurma : MonoBehaviour
 
     private Vector3 yerBul(int key, bool belirginkonum = false)
     {
-        if (belirginkonum) return yerler[key].dL + new Vector3(0, 70 * yerler[key].dex, 0);
-        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 110, 0);
+        if (belirginkonum) return yerler[key].dL + new Vector3(0, 30 * yerler[key].dex, 0);
+        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 45, 0);
     }
 
     private int keyBul(List<int> plc)

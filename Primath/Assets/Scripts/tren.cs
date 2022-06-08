@@ -9,10 +9,12 @@ public class tren : MonoBehaviour
     public Text kalan;
     public GameObject kapanis;
 
-    private float fkalan;
+    public float fkalan = 120f;
     private int dogrular;
     private bool endRun;
     private List<Vector3> esKonumlar;
+
+    public bool timeFlag;
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +39,6 @@ public class tren : MonoBehaviour
             listCreation.RemoveAt(randomed);
             order++;
         }
-
-        fkalan = 120;
     }
 
     void Update()
@@ -53,8 +53,11 @@ public class tren : MonoBehaviour
             StartCoroutine(findTrue());
             return;
         }
-        fkalan -= Time.deltaTime;
-        kalan.text = Mathf.RoundToInt(fkalan).ToString();
+        if(!timeFlag)
+        {
+            fkalan -= Time.deltaTime;
+            kalan.text = (fkalan / 60).ToString("0") + ":" + (fkalan % 60).ToString("00");
+        }
     }
 
     private IEnumerator findTrue()
