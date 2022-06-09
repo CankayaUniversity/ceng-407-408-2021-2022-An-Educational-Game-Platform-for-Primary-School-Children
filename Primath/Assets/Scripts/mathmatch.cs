@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class mathmatch : MonoBehaviour
 {
     public Transform[] PNL;
-    public GameObject panel_s, panel_w;
+    public GameObject panel_h, panel_w;
     public Text timeT, infoT, puanT;
 
     private Dictionary<int, List<card>> CARDS;
@@ -51,8 +51,10 @@ public class mathmatch : MonoBehaviour
         {
             konumlar.Add(PNL[0].GetChild(hb).position);
         }
+
+        startGame();
     }
- 
+
     void Update()
     {
         if (!aktif) return;
@@ -76,11 +78,16 @@ public class mathmatch : MonoBehaviour
     {
         zaman = 0;
         donner = 0;
-        order = -1;
+        order = 2;
         aktif = true;
-        panel_s.SetActive(false);
 
         nexTour();
+    }
+
+    public void HelpBox()
+    {
+        aktif = !aktif;
+        panel_h.SetActive(!panel_h.activeSelf);
     }
 
     public void defPosition(int pos)
@@ -93,7 +100,7 @@ public class mathmatch : MonoBehaviour
         if (order != 0) PUAN += Mathf.Max(0, Mathf.RoundToInt(160 - zaman));
         zaman = 0;
 
-        infoT.text = "Tur: " + (order + 1) + "/" + CARDS.Count;
+        infoT.text = "Tur: " + (order - 2) + "/" + (CARDS.Count - 3);
 
         if (order >= CARDS.Count)
         {
