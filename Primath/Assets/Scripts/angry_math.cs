@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class angry_math : MonoBehaviour
 {
-    public GameObject panel_s, panel_e, panel_w;
+    public GameObject panel_h, panel_e, panel_w;
     public Text oranText, stage;
     public Transform taslar, balonlar;
     public sapan SPN;
@@ -66,18 +66,24 @@ public class angry_math : MonoBehaviour
             }
             turQuest.Add(kie, randomed);
         }
+
+        startGame();
     }
 
     public void startGame()
     {
         aktif = true;
-        panel_s.SetActive(false);
         order_tur = -1;
         dogru = 0;
         denemeler = 0;
 
         nextTur();
         SPN.CreateRock();
+    }
+
+    public void HelpBox()
+    {
+        panel_h.SetActive(!panel_h.activeSelf);
     }
 
     private void loseGame()
