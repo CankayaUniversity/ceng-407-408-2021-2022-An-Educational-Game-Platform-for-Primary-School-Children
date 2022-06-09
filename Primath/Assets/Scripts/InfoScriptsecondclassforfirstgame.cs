@@ -26,6 +26,12 @@ public class InfoScriptsecondclassforfirstgame : MonoBehaviour
     IEnumerator Delay()
     {
         yield return new WaitForSeconds(delay);
+    
+    }
+
+    public void CloseButton()
+    {
+
         infoPanel.gameObject.SetActive(false);
         timer.isStop = false;
     }

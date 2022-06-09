@@ -109,6 +109,6 @@ public class MainMenu : MonoBehaviour
 
     public void LoadForuthGradeFirstGame() => SceneManager.LoadScene(10); //Dördüncü Sýnýf Birinci Oyun
     public void LoadForuthGradeSecondGame() => SceneManager.LoadScene(11); //Dördüncü Sýnýf Ýkinci Oyun
-    public void LoadForuthGradeThirdGame() => SceneManager.LoadScene(0); //Dördüncü Sýnýf Üçüncü Oyun
+    public void LoadForuthGradeThirdGame() => SceneManager.LoadScene(21); //Dördüncü Sýnýf Üçüncü Oyun
 
 }

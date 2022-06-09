@@ -29,4 +29,10 @@ public class InfoScriptsecondclassforsecondgame : MonoBehaviour
         infoPanel.gameObject.SetActive(false);
         timer.isStop = false;
     }
+    public void CloseButton()
+    {
+
+        infoPanel.gameObject.SetActive(false);
+        timer.isStop = false;
+    }
 }

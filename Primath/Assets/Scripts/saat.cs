@@ -15,7 +15,8 @@ public class saat : MonoBehaviour
     private Dictionary<string, float> MANGLE;
 
     public bool isStop = false;
-    private float kalan = 10;
+    public float kalan;
+   // private float kalan = 10;
     private bool devam = true;
     public int counter = 1;
     // Start is called before the first frame update

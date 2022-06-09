@@ -30,4 +30,10 @@ public class InfoScriptsecondclassforthirdgame : MonoBehaviour
         infoPanel.gameObject.SetActive(false);
        
     }
+    public void CloseButton()
+    {
+
+        infoPanel.gameObject.SetActive(false);
+     
+    }
 }
