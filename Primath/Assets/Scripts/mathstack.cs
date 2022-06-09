@@ -5,25 +5,25 @@ using UnityEngine.UI;
 
 public class mathstack : MonoBehaviour
 {
-    public GameObject anaEkran, oyunEkrani, oyunKazanma, oyunKaybetme;
+    public GameObject yardimEkran, anaEkran, oyunEkrani, oyunKazanma, oyunKaybetme;
     public Text SKT, SOR;
     public GameObject[] OBJ;
 
     private int score, TY, ANS;
-    private bool gonline;
+    private bool gonline, helpin;
     private List<islem> islemler;
 
     void Start()
     {
         islemler = new List<islem>();
         islemler.Add(new islem { answer = 1, bolme = new string[] { "1/1", "3/3", "4/4" }, carpma = new string[] { "1x1" }, cikarma = new string[] { "2-1", "4-3", "1-0" }, toplama = new string[] { "1+0", "0+1" } });
-        islemler.Add(new islem { answer = 2, bolme = new string[] { "4/2", "6/3", "8/4" }, carpma = new string[] { "2x1", "1x2" }, cikarma = new string[] { "4-2", "6-4", "5-3" }, toplama = new string[] { "1+1", "2+0" } });
-        islemler.Add(new islem { answer = 3, bolme = new string[] { "6/2", "9/3", "12/4" }, carpma = new string[] { "3x1", "1x3" }, cikarma = new string[] { "6-3", "5-2", "4-1" }, toplama = new string[] { "0+3", "2+1", "1+2" } });
-        islemler.Add(new islem { answer = 4, bolme = new string[] { "12/3", "8/2", "4/1" }, carpma = new string[] { "2x2", "4x1" }, cikarma = new string[] { "6-2", "5-1", "7-3" }, toplama = new string[] { "2+2", "3+1", "4+0" } });
-        islemler.Add(new islem { answer = 5, bolme = new string[] { "10/2", "5/1", "15/3" }, carpma = new string[] { "5x1", "1x5" }, cikarma = new string[] { "7-2", "6-1", "8-3" }, toplama = new string[] { "2+3", "4+1", "5+0" } });
-        islemler.Add(new islem { answer = 6, bolme = new string[] { "12/2", "6/1", "18/3" }, carpma = new string[] { "6x1", "2x3", "3x2" }, cikarma = new string[] { "7-1", "6-0", "12-6" }, toplama = new string[] { "2+3", "4+2", "5+1" } });
-        islemler.Add(new islem { answer = 7, bolme = new string[] { "14/2", "21/3", "7/1" }, carpma = new string[] { "7x1", "1x7" }, cikarma = new string[] { "14-7", "8-1", "10-3" }, toplama = new string[] { "6+1", "4+3", "2+5" } });
-        islemler.Add(new islem { answer = 8, bolme = new string[] { "16/2", "8/1", "24/3" }, carpma = new string[] { "4x2", "8x1" }, cikarma = new string[] { "10-2", "8-0", "9-1" }, toplama = new string[] { "6+2", "4+4", "3+5" } });
+        islemler.Add(new islem { answer = 2, bolme = new string[] { "46/23", "96/48", "36/18" }, carpma = new string[] { "2x1", "1x2" }, cikarma = new string[] { "4-2", "6-4", "5-3" }, toplama = new string[] { "1+1", "2+0" } });
+        islemler.Add(new islem { answer = 3, bolme = new string[] { "27/3", "63/21", "12/4" }, carpma = new string[] { "3x1", "1x3" }, cikarma = new string[] { "6-3", "5-2", "4-1" }, toplama = new string[] { "0+3", "2+1", "1+2" } });
+        islemler.Add(new islem { answer = 4, bolme = new string[] { "12/3", "48/12", "28/7" }, carpma = new string[] { "2x2", "4x1" }, cikarma = new string[] { "22-18", "30-26", "7-3" }, toplama = new string[] { "2+2", "3+1", "4+0" } });
+        islemler.Add(new islem { answer = 5, bolme = new string[] { "10/2", "100/20", "15/3" }, carpma = new string[] { "5x1", "1x5" }, cikarma = new string[] { "7-2", "6-1", "8-3" }, toplama = new string[] { "2+3", "4+1", "5+0" } });
+        islemler.Add(new islem { answer = 6, bolme = new string[] { "48/8", "54/9", "18/3" }, carpma = new string[] { "6x1", "2x3", "3x2" }, cikarma = new string[] { "7-1", "6-0", "12-6" }, toplama = new string[] { "2+3", "4+2", "5+1" } });
+        islemler.Add(new islem { answer = 7, bolme = new string[] { "49/7", "21/3", "56/8" }, carpma = new string[] { "7x1", "1x7" }, cikarma = new string[] { "14-7", "8-1", "10-3" }, toplama = new string[] { "6+1", "4+3", "2+5" } });
+        islemler.Add(new islem { answer = 8, bolme = new string[] { "64/8", "72/9", "24/3" }, carpma = new string[] { "4x2", "8x1" }, cikarma = new string[] { "10-2", "8-0", "9-1" }, toplama = new string[] { "6+2", "4+4", "3+5" } });
 
         //islemler.Add(new islem { answer = , bolme = new string[] { }, carpma = new string[] { }, cikarma = new string[] { }, toplama = new string[] { } });
     }
@@ -32,15 +32,37 @@ public class mathstack : MonoBehaviour
     {
         while (score < 100 && gonline)
         {
-            GameObject inent = Instantiate(OBJ[Random.Range(0, OBJ.Length)], new Vector3(0, 120, 0), Quaternion.identity);
-            inent.transform.SetParent(oyunEkrani.transform, false);
-            inent.GetComponent<RectTransform>().localPosition = new Vector3(Random.Range(-400, 401), 400, 0);
+            if (!helpin)
+            {
+                GameObject inent = Instantiate(OBJ[Random.Range(0, OBJ.Length)], new Vector3(0, 120, 0), Quaternion.identity);
+                inent.transform.SetParent(oyunEkrani.transform, false);
+                inent.GetComponent<RectTransform>().localPosition = new Vector3(Random.Range(-380, 381), 380, 0);
 
-            int ranged = Random.Range(1, islemler.Count + 1);
-            inent.transform.GetChild(0).GetComponent<Text>().text = ranged.ToString();
-            inent.GetComponent<Button>().onClick.AddListener(() => { answerRT(inent, ranged); });
-            yield return new WaitForSeconds(2.5f);
+                //inent.GetComponent<mathstackcubes>().MS = this;
+                int ranged = Random.Range(1, islemler.Count + 1);
+                inent.transform.GetChild(0).GetComponent<Text>().text = ranged.ToString();
+                inent.GetComponent<Button>().onClick.AddListener(() => { answerRT(inent, ranged); });
+                yield return new WaitForSeconds(2.5f);
+            }
+            else yield return new WaitForSeconds(0.25f);
         }
+    }
+
+    public void HelperBox()
+    {
+        yardimEkran.SetActive(!yardimEkran.activeSelf);
+        helpin = !helpin;
+    }
+
+    public void edgeCrash()
+    {
+        for (int clen = 0; clen < oyunEkrani.transform.childCount; clen++)
+        {
+            Destroy(oyunEkrani.transform.GetChild(clen).gameObject);
+        }
+
+        score = 0;
+        askQuestion();
     }
 
     public void startRoute(int type)
@@ -48,6 +70,7 @@ public class mathstack : MonoBehaviour
         TY = type;
         score = 0;
         gonline = true;
+        helpin = false;
 
         askQuestion();
         anaEkran.SetActive(false);
