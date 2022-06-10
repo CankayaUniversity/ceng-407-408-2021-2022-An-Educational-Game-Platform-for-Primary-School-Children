@@ -132,8 +132,8 @@ public class dondurma : MonoBehaviour
 
     private Vector3 yerBul(int key, bool belirginkonum = false)
     {
-        if (belirginkonum) return yerler[key].dL + new Vector3(0, 30 * yerler[key].dex, 0);
-        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 45, 0);
+        if (belirginkonum) return yerler[key].dL + new Vector3(0, 60 * yerler[key].dex, 0);
+        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 100, 0);
     }
 
     private int keyBul(List<int> plc)

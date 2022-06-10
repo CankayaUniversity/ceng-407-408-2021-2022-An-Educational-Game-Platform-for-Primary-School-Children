@@ -69,7 +69,7 @@ public class tren : MonoBehaviour
             {
                 eslemeler.GetChild(lea).GetComponent<RectTransform>().position = Vector3.Lerp(eslemeler.GetChild(lea).GetComponent<RectTransform>().position, eslesenler.GetChild(degeri - 1).GetComponent<RectTransform>().position, 0.2f);
                 if (Vector2.Distance(eslemeler.GetChild(lea).GetComponent<RectTransform>().position, eslesenler.GetChild(degeri - 1).GetComponent<RectTransform>().position) < 5)
-                {
+                {                
                     eslemeler.GetChild(lea).GetComponent<objeler>().deactivate();
                     eslesenler.GetChild(degeri - 1).GetChild(0).GetComponent<Text>().color = Color.green;
                 }
