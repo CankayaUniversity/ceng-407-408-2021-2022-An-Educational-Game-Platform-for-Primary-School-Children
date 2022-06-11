@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112.9, y: -117.1}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: -125.2, y: -120.1}
+  m_SizeDelta: {x: 96.45508, y: 82.580086}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &35813848
 Rigidbody2D:
@@ -195,7 +195,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06323624, y: -0.07383919}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -206,7 +206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.505173, y: 23.260601}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &35813850
 MonoBehaviour:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -522,15 +522,55 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
       propertyPath: m_Color.a
-      value: 0.5882353
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.6320754
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.5566344
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.40250087
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423769703048958831, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Text
       value: "verilen s\xFCre i\xE7erisinde sol tarafta bulunan demir paralar\u0131\r\na\u011Fac\u0131n
-        \xFCzerindeki yaz\u0131l\u0131 kutucuklar\u0131n \xFCzerine<color=red> mouse
-        </color> ile s\xFCr\xFCkleyerek do\u011Fru \u015Fekilde yerle\u015Ftirmelisin\r\nyanl\u0131\u015F
+        \xFCzerindeki yaz\u0131l\u0131 <color=orange>Portakallar\u0131n</color> \xFCzerine<color=red>
+        mouse </color> ile s\xFCr\xFCkleyerek do\u011Fru \u015Fekilde yerle\u015Ftirmelisin\r\nyanl\u0131\u015F
         yerle\u015Ftirdi\u011Fin taktirde para orada as\u0131l\u0131 kalacak ve oyunu
         kaybediceksin"
       objectReference: {fileID: 0}
@@ -1249,6 +1289,8 @@ GameObject:
   - component: {fileID: 678502455}
   - component: {fileID: 678502454}
   - component: {fileID: 678502453}
+  - component: {fileID: 678502459}
+  - component: {fileID: 678502458}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1361,6 +1403,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &678502458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678502452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5377358, g: 0.42122188, b: 0.26125845, a: 0.8}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &678502459
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678502452}
+  m_CullTransparentMesh: 0
 --- !u!1 &680098606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,8 +1621,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 113.2}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: 0.000018597, y: 137}
+  m_SizeDelta: {x: 97.28166, y: 87.724464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &859978375
 Rigidbody2D:
@@ -1579,7 +1658,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04425049, y: -0.07383728}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1590,7 +1669,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.544006, y: 15.957947}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &859978377
 MonoBehaviour:
@@ -1611,7 +1690,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2012,8 +2091,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -68.5, y: -5.2947}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: -65.4, y: 5.5}
+  m_SizeDelta: {x: 96.455, y: 85.66668}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1196511732
 Rigidbody2D:
@@ -2049,7 +2128,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06323624, y: -0.07383919}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2060,7 +2139,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.505173, y: 23.260601}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &1196511734
 MonoBehaviour:
@@ -2081,7 +2160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2223,7 +2302,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2234,7 +2313,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1305446211
 Rigidbody2D:
@@ -2548,7 +2627,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2559,7 +2638,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1373193359
 Rigidbody2D:
@@ -2876,7 +2955,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2887,7 +2966,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1455524572
 Rigidbody2D:
@@ -3183,7 +3262,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3194,7 +3273,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1560191264
 Rigidbody2D:
@@ -3291,8 +3370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 69.2, y: -5.2947}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: 70.8, y: -11.5}
+  m_SizeDelta: {x: 93.368225, y: 88.753334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1561382955
 Rigidbody2D:
@@ -3328,7 +3407,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06323624, y: -0.07383919}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3339,7 +3418,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.505173, y: 23.260601}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &1561382957
 MonoBehaviour:
@@ -3360,7 +3439,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3415,8 +3494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: -160}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: 10.1, y: -166.7}
+  m_SizeDelta: {x: 96.455, y: 89.782265}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1562818007
 Rigidbody2D:
@@ -3452,7 +3531,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06323624, y: -0.07383919}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3463,7 +3542,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.505173, y: 23.260601}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &1562818009
 MonoBehaviour:
@@ -3484,7 +3563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3626,7 +3705,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3637,7 +3716,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1580716035
 Rigidbody2D:
@@ -4036,7 +4115,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.5232086, y: 0.057502747}
+  m_Offset: {x: 0.44106865, y: 1.5037231}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4047,7 +4126,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 51.12964, y: 48.12404}
+  m_Size: {x: 91.63544, y: 97.30859}
   m_EdgeRadius: 0
 --- !u!50 &1726642533
 Rigidbody2D:
@@ -4353,8 +4432,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122.6, y: -117.1}
-  m_SizeDelta: {x: 90.28169, y: 76.406746}
+  m_AnchoredPosition: {x: 125.2, y: -123.2}
+  m_SizeDelta: {x: 95.42613, y: 88.753365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1875724329
 Rigidbody2D:
@@ -4390,7 +4469,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06323624, y: -0.07383919}
+  m_Offset: {x: -0.5563717, y: 0.95500946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4401,7 +4480,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 34.505173, y: 23.260601}
+  m_Size: {x: 95.657425, y: 85.920135}
   m_EdgeRadius: 0
 --- !u!114 &1875724331
 MonoBehaviour:
@@ -4422,7 +4501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: be0cc3a56cff861489aa266834dfe47b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4874,7 +4953,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.5372549, g: 0.41960785, b: 0.2627451, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
