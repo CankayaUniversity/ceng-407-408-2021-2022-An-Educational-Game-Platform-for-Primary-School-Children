@@ -10,6 +10,8 @@ public class dondurma : MonoBehaviour
     public Text sure;
     public GameObject kapanis, bitis;
 
+    [SerializeField] Sound sound;
+
     private Dictionary<int, string[]> math;
     private Dictionary<int, kulah> yerler;
     private List<Vector3> konumlar;
@@ -65,6 +67,8 @@ public class dondurma : MonoBehaviour
             topListesi.GetChild(gb).GetComponent<toplar>().KEY = randomKey;
             konumlar.Add(topListesi.GetChild(gb).GetComponent<RectTransform>().position);
         }
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
     }
 
     void Update()
@@ -88,7 +92,7 @@ public class dondurma : MonoBehaviour
         time -= Time.deltaTime;
         string minutes = (time / 60).ToString("0");
         string seconds = (time % 60).ToString("00");
-        sure.text = minutes + ":" + seconds;
+        sure.text = "Süre : " + minutes + ":" + seconds;
     }
 
     private IEnumerator otodiz()
@@ -123,17 +127,19 @@ public class dondurma : MonoBehaviour
             sure.color = Color.yellow;
             bitis.SetActive(true);
         }
+        sound.PlayTrueSound();
     }
 
     public void yanlisAlan(int order)
     {
         topListesi.GetChild(order).GetComponent<RectTransform>().position = konumlar[order];
+        sound.PlayFalseSound();
     }
 
     private Vector3 yerBul(int key, bool belirginkonum = false)
     {
-        if (belirginkonum) return yerler[key].dL + new Vector3(0, 60 * yerler[key].dex, 0);
-        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 100, 0);
+        if (belirginkonum) return yerler[key].dL + new Vector3(0, 50 * yerler[key].dex, 0);
+        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 80, 0);
     }
 
     private int keyBul(List<int> plc)

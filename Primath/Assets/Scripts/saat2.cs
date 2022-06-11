@@ -21,11 +21,15 @@ public class saat2 : MonoBehaviour
     [SerializeField] Transform infoPanel;
     [SerializeField] private float delay = 2f;
 
+    [SerializeField] Sound sound;
+
     void Start()
     {
         infoCanvas.enabled = true;
         infoPanel.gameObject.SetActive(false);
         TXT.text = "KALAN SANİYE: " + kalan;
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
     }
 
     void Update()
@@ -41,6 +45,7 @@ public class saat2 : MonoBehaviour
         if (kalan == 0 || kalan < 0)
         {
             kaybetmepanali.SetActive(true);
+            sound.PlayFalseSound();
             flag = false;
         }
     }
@@ -63,8 +68,8 @@ public class saat2 : MonoBehaviour
     {
         if (number == istenilensaat && number2 == istenilendakika && kalan > 0)
         {
-
             kazanmaPanel.SetActive(true);
+            sound.PlayTrueSound();
             flag = false;
         }
        
@@ -72,7 +77,7 @@ public class saat2 : MonoBehaviour
         {
             infoCanvas.gameObject.SetActive(true);
             infoPanel.gameObject.SetActive(true);
-
+            sound.PlayFalseSound();
             StartCoroutine(Delay());
              Debug.Log("Tekrar Dene");
         }

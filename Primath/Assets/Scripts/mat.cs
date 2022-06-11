@@ -17,6 +17,8 @@ public class mat : MonoBehaviour
     [SerializeField] Transform infoPanel;
     [SerializeField] private float delay = 2f;
 
+    [SerializeField] Sound sound;
+
     private int life;
 
     void Start()
@@ -28,6 +30,8 @@ public class mat : MonoBehaviour
 
         life = 3;
         TXT[0].text = "CAN: " + life;
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
     }
 
     // Update is called once per frame
@@ -60,10 +64,14 @@ public class mat : MonoBehaviour
                 if (life == 0) bitisPanel.SetActive(true);
 
                 TXT[0].text = "CAN: " + life;
+                sound.PlayFalseSound();
                 break;
             }
             else
+            {
                 yanlýsgecmex = false;
+                sound.PlayTrueSound();
+            }
         }
         if (yanlýsgecmex == true && life != 0)
         {

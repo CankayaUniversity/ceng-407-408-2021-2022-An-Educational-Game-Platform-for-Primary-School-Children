@@ -42,7 +42,6 @@ public class Timer2 : MonoBehaviour
         {
             bitisPanel.SetActive(true);
             text.text = "Kaybettin!!!";
-
         }
     }
    

@@ -12,6 +12,13 @@ public class matches : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragH
     private Vector2 lastMousePosition;
     private matches finded;
 
+    [SerializeField] Sound sound;
+
+    private void Start()
+    {
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         if (!isMoveable) return;
@@ -43,11 +50,15 @@ public class matches : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragH
 
         if (finded != null && finded.KEY == KEY)
         {
+            sound.PlayTrueSound();
+
             finded.deactivate();
             deactivate();
 
             MMR.iDone();
         }
+        else
+            sound.PlayFalseSound();
         MMR.defPosition(pos);
     }
 

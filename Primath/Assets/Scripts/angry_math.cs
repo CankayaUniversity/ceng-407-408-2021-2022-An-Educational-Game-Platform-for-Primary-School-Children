@@ -22,6 +22,8 @@ public class angry_math : MonoBehaviour
     private List<string> soruCevaplar;
     private int order_tur, order_soru, order_spawn, dogru, denemeler;
 
+    [SerializeField] Sound sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,7 +68,7 @@ public class angry_math : MonoBehaviour
             }
             turQuest.Add(kie, randomed);
         }
-
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
         startGame();
     }
 
@@ -162,9 +164,12 @@ public class angry_math : MonoBehaviour
     {
         if (turQuest[order_tur][order_soru].correct.Equals(answer))
         {
+            sound.PlayTrueSound();
             dogru++;
             askQuestion();
         }
+        else
+            sound.PlayFalseSound();
     }
 
     private class qst

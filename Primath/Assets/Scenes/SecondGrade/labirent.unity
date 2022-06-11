@@ -809,7 +809,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 479848798}
     - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   infoCanvas: {fileID: 390443339}
   infoPanel: {fileID: 1127010473}
-  delay: 10
+  delay: 20
 --- !u!223 &390443339 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 423769703987364900, guid: 279ec210176caa24388c48662ab4fb81,
@@ -1290,6 +1290,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430372, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769702898430372, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -200
+      objectReference: {fileID: 0}
     - target: {fileID: 423769702898430373, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_IsActive
@@ -1298,22 +1308,42 @@ PrefabInstance:
     - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0.9019608
       objectReference: {fileID: 0}
     - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.26666668
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.5764706
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423769702898430375, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.68235296
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703048958828, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703048958828, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703048958828, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 423769703048958828, guid: 279ec210176caa24388c48662ab4fb81,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 423769703048958831, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
@@ -1409,7 +1439,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 479848798}
     - target: {fileID: 423769703987364903, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1526,12 +1556,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 533018922}
+  - component: {fileID: 533018928}
   - component: {fileID: 533018921}
   - component: {fileID: 533018927}
   - component: {fileID: 533018926}
   - component: {fileID: 533018925}
   - component: {fileID: 533018924}
+  - component: {fileID: 533018923}
   m_Layer: 0
   m_Name: arka
   m_TagString: Untagged
@@ -1579,7 +1610,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8ed2125cc4464444a8ee6656609ce52e, type: 3}
-  m_Color: {r: 0.3207547, g: 0.31328845, b: 0.10439658, a: 0.21176471}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.75686276}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1589,20 +1620,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &533018922
-Transform:
+--- !u!222 &533018923
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533018920}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3}
-  m_LocalScale: {x: 50, y: 25, z: 0}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_CullTransparentMesh: 0
 --- !u!61 &533018924
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1707,6 +1732,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.0111717135}
   m_EdgeRadius: 0
+--- !u!224 &533018928
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533018920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 50, y: 25, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.32, y: 0.32}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &535611513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,8 +2192,8 @@ Canvas:
   m_GameObject: {fileID: 727826893}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 479848798}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2189,19 +2233,19 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727826893}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5, g: 0.49842826, b: 0.2570755, a: 0.56078434}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 16ccbab8697105944ae074b44919d998, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

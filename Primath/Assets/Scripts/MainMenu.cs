@@ -10,9 +10,8 @@ public class MainMenu : MonoBehaviour
     private Transform mainPanel, playPanel, settingsPanel, gradeGames;
     private Transform firstGrade, secondGrade, thirdGrade, fourthGrade;
 
-    private float volume = 0.5f;
-    private float sound = 0.5f;
-
+    [SerializeField] Music music;
+    [SerializeField] Sound sound;
     private void Awake()
     {
         mainMenu = this.gameObject.GetComponent<Canvas>();
@@ -36,9 +35,23 @@ public class MainMenu : MonoBehaviour
     }
     private void Start()
     {
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
+        music = GameObject.FindGameObjectWithTag("Music").GetComponent<Music>();
+
+        settingsPanel.Find("SoundSlider").GetComponent<Slider>().value = music.GetMusicVolume();
+        settingsPanel.Find("VolumeSlider").GetComponent<Slider>().value = sound.GetSoundVolume();
+
         OpenMainPanel();
-        settingsPanel.Find("SoundSlider").GetComponent<Slider>().value = sound;
-        settingsPanel.Find("VolumeSlider").GetComponent<Slider>().value = volume;
+    }
+
+    public void ChangeMusicVol(float vol)
+    {
+        music.ChangeMusicVolume(vol);
+    }
+
+    public void ChangeSoundVol(float vol)
+    {
+        sound.ChangeSoundVolume(vol);
     }
 
     public void OpenMainPanel()
@@ -90,10 +103,6 @@ public class MainMenu : MonoBehaviour
         obj.transform.parent.gameObject.SetActive(false);
         playPanel.gameObject.SetActive(true);
     }
-
-    public void ChangeSound(float snd) => sound = snd;
-
-    public void ChangeVolume(float vlm) => volume = vlm;
 
     public void LoadFirstGradeFirstGame() => SceneManager.LoadScene(1); //Birinci Sýnýf Birinci Oyun
     public void LoadFirstGradeSecondGame() => SceneManager.LoadScene(2); //Birinci Sýnýf Ýkinci Oyun

@@ -16,8 +16,9 @@ public class NumericCount : MonoBehaviour
     public int countNum = 6;
     public string emtpy = " ";
     private int range;
-
     private int score;
+
+    [SerializeField] Sound sound;
 
     public int maxYanlis = 3;
     public Text yanlisTxt;
@@ -40,11 +41,13 @@ public class NumericCount : MonoBehaviour
         {
             fields.Add(gm.Find("Text").gameObject.GetComponent<Text>());
         }
-        yanlisTxt.text = "<color=red>" + hataSayisi.ToString() + "</color>/" + maxYanlis.ToString(); //+ "/<color=green>" + "</color>"
+        yanlisTxt.text = "Yanlış Sayısı : " + "<color=red>" + hataSayisi.ToString() + "</color>" + "/<color=green>" + maxYanlis.ToString() + "</color>";
         dogruSıralama = 1;
     }
     private void Start()
     {
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
+
         fieldNum = fieldHolders.Count;
         info.secondStatge = false;
         FillFields();
@@ -135,14 +138,16 @@ public class NumericCount : MonoBehaviour
             if (sıralama[index].text == (dogruSıralama * countNum).ToString())
             {
                 sıralama[index].color = Color.green;
+                sound.PlayTrueSound();
                 dogruSıralama++;
             }
             else
             {
                 sıralama[index].color = Color.red;
+                sound.PlayFalseSound();
                 hataSayisi++;
                 score -= 10;
-                yanlisTxt.text = "<color=red>" + hataSayisi.ToString() + "</color>" + "/<color=green>" + maxYanlis.ToString() + "</color>";
+                yanlisTxt.text = "Yanlış Sayısı : " + "<color=red>" + hataSayisi.ToString() + "</color>" + "/<color=green>" + maxYanlis.ToString() + "</color>";
             }
         }
     }

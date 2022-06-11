@@ -13,6 +13,8 @@ public class mathstack : MonoBehaviour
     private bool gonline, helpin;
     private List<islem> islemler;
 
+    [SerializeField] Sound sound;
+
     void Start()
     {
         islemler = new List<islem>();
@@ -24,6 +26,8 @@ public class mathstack : MonoBehaviour
         islemler.Add(new islem { answer = 6, bolme = new string[] { "48/8", "54/9", "18/3" }, carpma = new string[] { "6x1", "2x3", "3x2" }, cikarma = new string[] { "7-1", "6-0", "12-6" }, toplama = new string[] { "2+3", "4+2", "5+1" } });
         islemler.Add(new islem { answer = 7, bolme = new string[] { "49/7", "21/3", "56/8" }, carpma = new string[] { "7x1", "1x7" }, cikarma = new string[] { "14-7", "8-1", "10-3" }, toplama = new string[] { "6+1", "4+3", "2+5" } });
         islemler.Add(new islem { answer = 8, bolme = new string[] { "64/8", "72/9", "24/3" }, carpma = new string[] { "4x2", "8x1" }, cikarma = new string[] { "10-2", "8-0", "9-1" }, toplama = new string[] { "6+2", "4+4", "3+5" } });
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         //islemler.Add(new islem { answer = , bolme = new string[] { }, carpma = new string[] { }, cikarma = new string[] { }, toplama = new string[] { } });
     }
@@ -100,6 +104,7 @@ public class mathstack : MonoBehaviour
         {
             score += 5;
             SKT.text = score + "/100";
+            sound.PlayTrueSound();
             if (score >= 100)
             {
                 oyunKazanma.SetActive(true);
@@ -109,6 +114,7 @@ public class mathstack : MonoBehaviour
         }
         else
         {
+            sound.PlayFalseSound();
             ielf.GetComponent<Button>().enabled = false;
             ielf.GetComponent<Image>().color = Color.black;
             ielf.transform.GetChild(0).gameObject.SetActive(false);

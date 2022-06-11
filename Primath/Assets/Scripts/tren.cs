@@ -9,6 +9,8 @@ public class tren : MonoBehaviour
     public Text kalan;
     public GameObject kapanis;
 
+    [SerializeField] Sound sound;
+
     public float fkalan = 120f;
     private int dogrular;
     private bool endRun;
@@ -40,6 +42,8 @@ public class tren : MonoBehaviour
             listCreation.RemoveAt(randomed);
             order++;
         }
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
     }
 
     void Update()
@@ -57,7 +61,7 @@ public class tren : MonoBehaviour
         if(!timeFlag)
         {
             fkalan -= Time.deltaTime;
-            kalan.text = (fkalan / 60).ToString("0") + ":" + (fkalan % 60).ToString("00");
+            kalan.text = "Süre : " + (fkalan / 60).ToString("0") + ":" + (fkalan % 60).ToString("00");
         }
     }
 
@@ -90,10 +94,12 @@ public class tren : MonoBehaviour
             endRun = true;
             kapanis.SetActive(true);
         }
+        sound.PlayTrueSound();
     }
 
     public void yanlisAlan(int order)
     {
         eslemeler.GetChild(order).GetComponent<RectTransform>().position = esKonumlar[order];
+        sound.PlayFalseSound();
     }
 }

@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
     {
         minutes = (CountTime / 60).ToString("0");
         seconds = (CountTime % 60).ToString("00");
-        timerText.text = minutes + ":" + seconds;
+        timerText.text ="Süre : " + minutes + ":" + seconds;
     }
 
     public int getTimeAsSec()

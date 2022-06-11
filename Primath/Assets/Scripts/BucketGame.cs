@@ -66,7 +66,6 @@ public class BucketGame : MonoBehaviour
                 {
                     objectToDrag.position = objectToCopy.position;
                     objectToCopy.position = orginalPosition; // doğru olunca yerine dönsün
-                    print(orginalPosition);
                     //GameObject.Find("GT_GT_Manager").GetComponent<GradeThird_GameOne_Manager>().
                    this.GetComponent<GT_GameTwo_Manager>().chekForEquation(objectToDrag.gameObject.GetComponent<Image>().name);
                 }

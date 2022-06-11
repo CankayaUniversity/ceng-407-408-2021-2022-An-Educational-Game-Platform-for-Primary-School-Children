@@ -10,6 +10,8 @@ public class soru : MonoBehaviour
     public Image[] BTI;
     public Sprite[] BIT;
 
+    [SerializeField] Sound sound;
+
     private List<question> questions;
     private int order, dogru;
     private float time;
@@ -39,6 +41,8 @@ public class soru : MonoBehaviour
         {
             questions.RemoveAt(Random.Range(0, questions.Count));
         }
+
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         askQuestion();
     }
@@ -76,6 +80,7 @@ public class soru : MonoBehaviour
         TXT[2].text = questions[order].qst;
         TXT[3].text = questions[order].options[0];
         TXT[4].text = questions[order].options[1];
+
         if (questions[order].correct == 0)
         {
             BTI[0].sprite = BIT[0];
@@ -92,9 +97,20 @@ public class soru : MonoBehaviour
 
     public void answer(int los)
     {
-        if (inquest) return;
+        if (inquest)
+        {
+            return;
+        }
 
-        if (los == questions[order].correct) dogru++;
+        if (los == questions[order].correct)
+        {
+            sound.PlayTrueSound();
+            dogru++;
+        }
+        else
+        {
+            sound.PlayFalseSound();
+        }
         inquest = true;
         StartCoroutine(animBIT());
     }

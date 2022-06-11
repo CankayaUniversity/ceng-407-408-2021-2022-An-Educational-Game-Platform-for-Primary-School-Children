@@ -11,6 +11,7 @@ public class GT_GameTwo_Manager : MonoBehaviour
 
     private const string EQUAL = "EqualBucket", SMALLER = "SmallerBucket", BIGGER = "BiggerBucket";
 
+    [SerializeField] Sound sound;
 
     Transform corePanelTrans, topPanelTrans;
     Text leftTxt, rightTxt;
@@ -27,6 +28,7 @@ public class GT_GameTwo_Manager : MonoBehaviour
         qeustTxt = topPanelTrans.Find("QuestionNumber").gameObject.GetComponent<Text>();
         scoreTxt = topPanelTrans.Find("Score").gameObject.GetComponent<Text>();
 
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         score = 0;
         qNumber = 0;
@@ -50,12 +52,24 @@ public class GT_GameTwo_Manager : MonoBehaviour
     public void chekForEquation(string name)
     {
         if (left == right && name == EQUAL)
+        {
             score++;
+            sound.PlayTrueSound();
+        }
         else if (left < right && name == SMALLER)
+        {
             score++;
+            sound.PlayTrueSound();
+        }
         else if (left > right && name == BIGGER)
+        {
             score++;
-
+            sound.PlayTrueSound();
+        }
+        else
+        {
+            sound.PlayFalseSound();
+        }
         StartCoroutine(WaitForSec(name));
     }
 

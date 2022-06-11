@@ -26,6 +26,8 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
     GameObject redGirl, wolf;
     List<GameObject> buttons = new List<GameObject>();
 
+    [SerializeField] Sound sound;
+
     public TGFinish tgFinish;
 
     void Start()
@@ -49,7 +51,7 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
         buttons.Add(ansPanel.transform.Find("Answer_2").gameObject);
         buttons.Add(ansPanel.transform.Find("Answer_3").gameObject);
 
-
+        sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         ansNum.GetComponent<Text>().text = "<color=green>" + score.ToString() + "</color>";
 
@@ -122,11 +124,13 @@ public class GradeThird_GameOne_Manager : MonoBehaviour
             score++;
             ansNum.GetComponent<Text>().text = "<color=green>" + score.ToString() + "</color>";
             text.GetComponentInParent<Animator>().Play("Correct");
+            sound.PlayTrueSound();
             redGirl.GetComponent<MoveImage>().Move();
         }
         else
         {
             text.GetComponentInParent<Animator>().Play("False");
+            sound.PlayFalseSound();
             wolf.GetComponent<MoveImage>().Move();
         }
 
