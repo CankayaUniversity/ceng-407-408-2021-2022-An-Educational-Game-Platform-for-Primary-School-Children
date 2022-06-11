@@ -16,6 +16,7 @@ public class tren : MonoBehaviour
 
     public bool timeFlag;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -84,8 +85,10 @@ public class tren : MonoBehaviour
         dogrular++;
         if (dogrular >= 20)
         {
+
             kalan.color = Color.green;
             endRun = true;
+            kapanis.SetActive(true);
         }
     }
 
