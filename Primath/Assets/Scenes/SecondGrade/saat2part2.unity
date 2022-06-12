@@ -3907,7 +3907,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Dakikay\u0131 Giriniz"
+  m_Text: Saati Giriniz
 --- !u!222 &1764369518
 CanvasRenderer:
   m_ObjectHideFlags: 0
