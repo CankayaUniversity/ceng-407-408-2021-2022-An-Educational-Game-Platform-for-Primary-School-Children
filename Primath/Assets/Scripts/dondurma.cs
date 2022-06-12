@@ -12,6 +12,8 @@ public class dondurma : MonoBehaviour
 
     [SerializeField] Sound sound;
 
+    [SerializeField] Canvas canvas;
+
     private Dictionary<int, string[]> math;
     private Dictionary<int, kulah> yerler;
     private List<Vector3> konumlar;
@@ -138,8 +140,8 @@ public class dondurma : MonoBehaviour
 
     private Vector3 yerBul(int key, bool belirginkonum = false)
     {
-        if (belirginkonum) return yerler[key].dL + new Vector3(0, 50 * yerler[key].dex, 0);
-        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, 80, 0);
+        if (belirginkonum) return yerler[key].dL + new Vector3(0, canvas.scaleFactor * 50 * yerler[key].dex, 0);
+        else return GameObject.Find(key.ToString()).GetComponent<RectTransform>().position + new Vector3(0, canvas.scaleFactor * 90, 0);
     }
 
     private int keyBul(List<int> plc)

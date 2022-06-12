@@ -2331,11 +2331,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2044493708}
+      objectReference: {fileID: 1907281471}
     - target: {fileID: 423769703287433202, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadMainPage
+      value: GuestionButton
       objectReference: {fileID: 0}
     - target: {fileID: 423769703287433203, guid: 279ec210176caa24388c48662ab4fb81,
         type: 3}
@@ -2481,6 +2481,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1907281468}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1907281471 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81,
+    type: 3}
+  m_PrefabInstance: {fileID: 1907281468}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d268edc7ffae747a3d4cdbc36ffea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934589215
 GameObject:
   m_ObjectHideFlags: 0

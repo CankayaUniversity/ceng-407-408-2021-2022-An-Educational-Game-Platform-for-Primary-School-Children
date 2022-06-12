@@ -1243,6 +1243,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 991019776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &991019779 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 423769702898430373, guid: 279ec210176caa24388c48662ab4fb81,
+    type: 3}
+  m_PrefabInstance: {fileID: 991019776}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129566527
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,9 +1408,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1850539530}
-        m_MethodName: GuestionButton
-        m_Mode: 1
+      - m_Target: {fileID: 991019779}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2095,6 +2101,7 @@ MonoBehaviour:
   kapanis: {fileID: 1766822252}
   bitis: {fileID: 914212948}
   sound: {fileID: 0}
+  canvas: {fileID: 13158112}
   time: 90
   timeFlag: 0
 --- !u!1 &1654405380
@@ -2327,18 +2334,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766822252}
   m_CullTransparentMesh: 1
---- !u!114 &1850539530 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81,
-    type: 3}
-  m_PrefabInstance: {fileID: 991019776}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35d268edc7ffae747a3d4cdbc36ffea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2034040569
 GameObject:
   m_ObjectHideFlags: 0

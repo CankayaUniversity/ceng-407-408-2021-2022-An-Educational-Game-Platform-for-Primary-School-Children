@@ -5686,6 +5686,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2060140798432732606, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2060140798942928208, guid: a175a94652bff674788fb45a2dd7fc52,
         type: 3}
       propertyPath: m_Pivot.x
@@ -5798,6 +5803,11 @@ PrefabInstance:
       objectReference: {fileID: 597385811}
     - target: {fileID: 2060140798942928211, guid: a175a94652bff674788fb45a2dd7fc52,
         type: 3}
+      propertyPath: panel
+      value: 
+      objectReference: {fileID: 2060140798206693290}
+    - target: {fileID: 2060140798942928211, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
       propertyPath: gameCanvases.Array.data[0]
       value: 
       objectReference: {fileID: 247759267}
@@ -5819,7 +5829,13 @@ PrefabInstance:
     - target: {fileID: 2060140798942928220, guid: a175a94652bff674788fb45a2dd7fc52,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a175a94652bff674788fb45a2dd7fc52, type: 3}
+--- !u!1 &2060140798206693290 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2060140798432732606, guid: a175a94652bff674788fb45a2dd7fc52,
+    type: 3}
+  m_PrefabInstance: {fileID: 2060140798206693289}
+  m_PrefabAsset: {fileID: 0}
