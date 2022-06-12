@@ -75,7 +75,7 @@ public class GT_GameTwo_Manager : MonoBehaviour
 
     IEnumerator WaitForSec(string name)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         this.GetComponent<BucketGame>().TurnOrginalPos(name);
         PrintQuestion();

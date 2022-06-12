@@ -10,9 +10,9 @@ public class BucketGame : MonoBehaviour
     public const string CONST_POS_TAG = "UIQuestionPos";
     public bool dragging = false;
 
-    private const string EQUAL = "EqualBucket", SMALLER = "SmallerBucket", BIGGER = "BiggerBucket";
+    private const string EQUAL = "EqualBucket", SMALLER = "SmallerBucket";
 
-    private Vector2 orginalPosition, middlePos;
+    private Vector2 orginalPosition, middlePos, smallOrginPos, eqOrginPos, bigOrginPos;
     private Transform corePanel;
     private Transform questionPos;
     private Transform objectToDrag;
@@ -31,6 +31,10 @@ public class BucketGame : MonoBehaviour
         smaller = corePanel.Find("SmallerBucket").transform;
         equal = corePanel.Find("EqualBucket").transform;
         bigger = corePanel.Find("BiggerBucket").transform;
+
+        smallOrginPos = smaller.position;
+        eqOrginPos = equal.position;
+        bigOrginPos = bigger.position;
     }
 
     void Update()
@@ -64,9 +68,7 @@ public class BucketGame : MonoBehaviour
 
                 if (objectToCopy != null)
                 {
-                    objectToDrag.position = objectToCopy.position;
-                    objectToCopy.position = orginalPosition; // doğru olunca yerine dönsün
-                    //GameObject.Find("GT_GT_Manager").GetComponent<GradeThird_GameOne_Manager>().
+                   objectToDrag.position = middlePos;
                    this.GetComponent<GT_GameTwo_Manager>().chekForEquation(objectToDrag.gameObject.GetComponent<Image>().name);
                 }
                 else
@@ -87,15 +89,15 @@ public class BucketGame : MonoBehaviour
         questionPos.position = middlePos;
         if(typeName == SMALLER)
         {
-            smaller.position = orginalPosition;
+            smaller.position = smallOrginPos;
         }
         else if(typeName == EQUAL)
         {
-            equal.position = orginalPosition;
+            equal.position = eqOrginPos;
         }
         else //for bigger
         {
-            bigger.position = orginalPosition;
+            bigger.position = bigOrginPos;
         }
         
     }
