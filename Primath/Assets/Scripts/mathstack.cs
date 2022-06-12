@@ -103,7 +103,7 @@ public class mathstack : MonoBehaviour
         if (value == ANS)
         {
             score += 5;
-            SKT.text = score + "/100";
+            SKT.text = "Skor: " + score + "/100";
             sound.PlayTrueSound();
             if (score >= 100)
             {
