@@ -47,7 +47,8 @@ public class mathstack : MonoBehaviour
                 inent.GetComponent<RectTransform>().localPosition = new Vector3(Random.Range(-380, 381), 380, 0);
 
                 //inent.GetComponent<mathstackcubes>().MS = this;
-                int ranged = Random.Range(1, islemler.Count + 1);
+                var temp = Random.Range(1, islemler.Count + 1);
+                int ranged = islemler[temp].answer;
                 inent.transform.GetChild(0).GetComponent<Text>().text = ranged.ToString();
                 inent.GetComponent<Button>().onClick.AddListener(() => { answerRT(inent, ranged); });
                 yield return new WaitForSeconds(2.5f);
