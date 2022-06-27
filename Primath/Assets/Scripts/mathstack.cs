@@ -18,19 +18,16 @@ public class mathstack : MonoBehaviour
     void Start()
     {
         islemler = new List<islem>();
-        //islemler.Add(new islem { answer = 1, bolme = new string[] { "1/1", "3/3", "4/4" }, carpma = new string[] { "1x1" }, cikarma = new string[] { "2-1", "4-3", "1-0" }, toplama = new string[] { "1+0", "0+1" } });
-        //islemler.Add(new islem { answer = 2, bolme = new string[] { "46/23", "96/48", "36/18" }, carpma = new string[] { "2x1", "1x2" }, cikarma = new string[] { "4-2", "6-4", "5-3" }, toplama = new string[] { "1+1", "2+0" } });
+        islemler.Add(new islem { answer = 1, bolme = new string[] { "1/1", "3/3", "4/4" }, carpma = new string[] { "1x1" }, cikarma = new string[] { "2-1", "4-3", "1-0" }, toplama = new string[] { "1+0", "0+1" } });
+        islemler.Add(new islem { answer = 2, bolme = new string[] { "46/23", "96/48", "36/18" }, carpma = new string[] { "2x1", "1x2" }, cikarma = new string[] { "4-2", "6-4", "5-3" }, toplama = new string[] { "1+1", "2+0" } });
         islemler.Add(new islem { answer = 3, bolme = new string[] { "27/3", "63/21", "12/4" }, carpma = new string[] { "3x1", "1x3" }, cikarma = new string[] { "6-3", "5-2", "4-1" }, toplama = new string[] { "0+3", "2+1", "1+2" } });
         islemler.Add(new islem { answer = 4, bolme = new string[] { "12/3", "48/12", "28/7" }, carpma = new string[] { "2x2", "4x1" }, cikarma = new string[] { "22-18", "30-26", "7-3" }, toplama = new string[] { "2+2", "3+1", "4+0" } });
         islemler.Add(new islem { answer = 5, bolme = new string[] { "10/2", "100/20", "15/3" }, carpma = new string[] { "5x1", "1x5" }, cikarma = new string[] { "7-2", "6-1", "8-3" }, toplama = new string[] { "2+3", "4+1", "5+0" } });
         islemler.Add(new islem { answer = 6, bolme = new string[] { "48/8", "54/9", "18/3" }, carpma = new string[] { "6x1", "2x3", "3x2" }, cikarma = new string[] { "7-1", "6-0", "12-6" }, toplama = new string[] { "2+3", "4+2", "5+1" } });
         islemler.Add(new islem { answer = 7, bolme = new string[] { "49/7", "21/3", "56/8" }, carpma = new string[] { "7x1", "1x7" }, cikarma = new string[] { "14-7", "8-1", "10-3" }, toplama = new string[] { "6+1", "4+3", "2+5" } });
         islemler.Add(new islem { answer = 8, bolme = new string[] { "64/8", "72/9", "24/3" }, carpma = new string[] { "4x2", "8x1" }, cikarma = new string[] { "10-2", "8-0", "9-1" }, toplama = new string[] { "6+2", "4+4", "3+5" } });
+        islemler.Add(new islem { answer = 9, bolme = new string[] { "90/10", "81/9", "54/6" }, carpma = new string[] { "9x1", "3x3" }, cikarma = new string[] { "11-2", "19-10", "14-5" }, toplama = new string[] { "7+2", "4+5", "3+6" } });
         islemler.Add(new islem { answer = 10, bolme = new string[] { "80/8", "100/10", "40/4" }, carpma = new string[] { "5x2", "10x1" }, cikarma = new string[] { "18-8", "20-10", "15-5" }, toplama = new string[] { "8+2", "4+6", "5+5" } });
-        islemler.Add(new islem { answer = 15, bolme = new string[] { "45/3", "60/4", "75/5" }, carpma = new string[] { "3x5", "15x1" }, cikarma = new string[] { "17-2", "20-5", "21-6" }, toplama = new string[] { "10+5", "9+6", "12+3" } });
-        islemler.Add(new islem { answer = 20, bolme = new string[] { "80/4", "100/5", "40/2" }, carpma = new string[] { "10x2", "4x5" }, cikarma = new string[] { "40-20", "26-6", "32-12" }, toplama = new string[] { "14+6", "13+7", "17+3" } });
-        islemler.Add(new islem { answer = 24, bolme = new string[] { "48/2", "72/3", "96/4" }, carpma = new string[] { "6x4", "8x3" }, cikarma = new string[] { "29-5", "30-6", "32-8" }, toplama = new string[] { "18+6", "17+7", "21+3" } });
-
         sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         //islemler.Add(new islem { answer = , bolme = new string[] { }, carpma = new string[] { }, cikarma = new string[] { }, toplama = new string[] { } });
@@ -47,8 +44,7 @@ public class mathstack : MonoBehaviour
                 inent.GetComponent<RectTransform>().localPosition = new Vector3(Random.Range(-380, 381), 380, 0);
 
                 //inent.GetComponent<mathstackcubes>().MS = this;
-                int temp = Random.Range(1, islemler.Count + 1);
-                int ranged = islemler[temp].answer;
+                int ranged = Random.Range(1, islemler.Count + 1);
                 inent.transform.GetChild(0).GetComponent<Text>().text = ranged.ToString();
                 inent.GetComponent<Button>().onClick.AddListener(() => { answerRT(inent, ranged); });
                 yield return new WaitForSeconds(2.5f);
