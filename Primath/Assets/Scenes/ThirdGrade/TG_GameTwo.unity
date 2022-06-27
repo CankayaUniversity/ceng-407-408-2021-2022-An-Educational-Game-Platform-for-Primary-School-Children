@@ -895,7 +895,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerText: {fileID: 986178031}
   time: 0
-  CountTime: 10
+  CountTime: 60
   isStop: 0
 --- !u!1 &1011347682
 GameObject:
