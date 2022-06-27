@@ -52,6 +52,22 @@ public class InfoScript : MonoBehaviour
             tren.timeFlag = false;
     }
 
+    public void CloseInfoPanel()
+    {
+        ChangePanelActivity(false);
+        if (timer != null && !timer.isStop)
+            return;
+
+        if (timer != null)
+            timer.isStop = false;
+        if (dondurma != null)
+            dondurma.timeFlag = false;
+        if (soru != null)
+            soru.timeFlag = false;
+        if (tren != null)
+            tren.timeFlag = false;
+    }
+
     private void ChangePanelActivity(bool sec)
     {
         if (!secondStatge)

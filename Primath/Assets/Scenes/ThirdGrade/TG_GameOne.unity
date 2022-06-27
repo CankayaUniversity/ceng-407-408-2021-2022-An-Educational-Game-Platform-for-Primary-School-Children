@@ -133,6 +133,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2060140798459123618, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140798694627792, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140798813553244, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_Text
+      value: Oyun Bitti
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140798813553245, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 2060140798942928208, guid: a175a94652bff674788fb45a2dd7fc52,
         type: 3}
       propertyPath: m_Pivot.x
@@ -272,6 +292,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FinishCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140799257931676, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140799484112112, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2060140799940903869, guid: a175a94652bff674788fb45a2dd7fc52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a175a94652bff674788fb45a2dd7fc52, type: 3}
@@ -1196,8 +1231,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1664277654}
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: CloseInfoPanel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2699,12 +2734,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1664277651}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1664277654 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 423769702898430373, guid: 279ec210176caa24388c48662ab4fb81,
+--- !u!114 &1664277654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1920527589, guid: 279ec210176caa24388c48662ab4fb81,
     type: 3}
   m_PrefabInstance: {fileID: 1664277651}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d268edc7ffae747a3d4cdbc36ffea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1690046612
 GameObject:
   m_ObjectHideFlags: 0

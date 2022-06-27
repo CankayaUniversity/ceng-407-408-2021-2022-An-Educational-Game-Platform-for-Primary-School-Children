@@ -10,9 +10,9 @@ public class GT_GameTwo_Manager : MonoBehaviour
     private int min, max, left, right;
 
     private const string EQUAL = "EqualBucket", SMALLER = "SmallerBucket", BIGGER = "BiggerBucket";
-
+    Timer timer;
     [SerializeField] Sound sound;
-
+    [SerializeField] TGFinish finish;
     Transform corePanelTrans, topPanelTrans;
     Text leftTxt, rightTxt;
     Text qeustTxt, scoreTxt;
@@ -28,6 +28,8 @@ public class GT_GameTwo_Manager : MonoBehaviour
         qeustTxt = topPanelTrans.Find("QuestionNumber").gameObject.GetComponent<Text>();
         scoreTxt = topPanelTrans.Find("Score").gameObject.GetComponent<Text>();
 
+        timer = topPanelTrans.Find("Timer").gameObject.GetComponent<Timer>();
+
         sound = GameObject.FindGameObjectWithTag("Sound").GetComponent<Sound>();
 
         score = 0;
@@ -35,6 +37,14 @@ public class GT_GameTwo_Manager : MonoBehaviour
         min = numbers.min;
         max = numbers.max;
         PrintQuestion();
+    }
+
+    private void Update()
+    {
+        if (!timer.isTimeExposed())
+        {
+            finish.Finished();
+        }
     }
     private void PrintQuestion()
     {
