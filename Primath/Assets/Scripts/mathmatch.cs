@@ -26,7 +26,7 @@ public class mathmatch : MonoBehaviour
         CARDS[0].Add(new card { kie = 2, questions = new string[] { "1+1", "2+0", "2-0", "3-1", "1x2", "2x1", "4/2", "6/3" } });
         CARDS[0].Add(new card { kie = 3, questions = new string[] { "1+2", "3+0", "4-1", "3-0", "3x1", "1x3", "6/2", "3/1" } });
         CARDS.Add(1, new List<card>());
-        CARDS[1].Add(new card { kie = 5, questions = new string[] { "2+3", "1+4", "7-6", "6-1", "5x1", "1x5", "10/2", "5/1" } });
+        CARDS[1].Add(new card { kie = 5, questions = new string[] { "2+3", "1+4", "7-2", "6-1", "5x1", "1x5", "10/2", "5/1" } });
         CARDS[1].Add(new card { kie = 6, questions = new string[] { "3+3", "4+2", "8-2", "10-4", "6x1", "2x3", "12/2", "6/1" } });
         CARDS[1].Add(new card { kie = 8, questions = new string[] { "4+4", "3+5", "9-1", "10-2", "4x2", "1x8", "16/2", "8/1" } });
         CARDS.Add(2, new List<card>());
@@ -78,7 +78,7 @@ public class mathmatch : MonoBehaviour
     {
         zaman = 0;
         donner = 0;
-        order = 2;
+        order = -1;
         aktif = true;
 
         nexTour();
@@ -100,13 +100,13 @@ public class mathmatch : MonoBehaviour
         if (order != 0) PUAN += Mathf.Max(0, Mathf.RoundToInt(160 - zaman));
         zaman = 0;
 
-        infoT.text = "Tur: " + (order - 2) + "/" + (CARDS.Count - 3);
+        infoT.text = "Tur: " + (order + 1) + "/" + CARDS.Count;
 
         if (order >= CARDS.Count)
         {
             aktif = false;
             panel_w.SetActive(true);
-            puanT.text = "Puanýnýz: " + PUAN;
+            puanT.text = "Puanï¿½nï¿½z: " + PUAN;
 
             return;
         }
